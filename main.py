@@ -4,6 +4,13 @@ import os
 import time
 
 
+def clear():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+        
+  
 def main():
     board = Board()
 
@@ -17,10 +24,10 @@ def main():
 
         if success:
             if not game_over:
-                os.system("cls")
+                clear()
                 board.switch_turn()
             else:
-                os.system("cls")
+                clear()
                 board.print_board()
                 print("\n    GAME OVER    \n")
                 if winner != "DRAW":
@@ -30,13 +37,13 @@ def main():
                 break
         else:
             time.sleep(1)
-            os.system("cls")
+            clear()
 
 
 if __name__ == "__main__":
     print(logo)
     print("\n[*] PRESS ENTER TO START")
     input()
-    os.system("cls")
+    clear()
 
     main()
