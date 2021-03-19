@@ -33,29 +33,53 @@ class Board:
             return False
 
     def check_x(self):
+
+        # Check Rows
         if self.board[0][0] == "X" and self.board[0][1] == "X" and self.board[0][2] == "X":
             return True
         elif self.board[1][0] == "X" and self.board[1][1] == "X" and self.board[1][2] == "X":
             return True
         elif self.board[2][0] == "X" and self.board[2][1] == "X" and self.board[2][2] == "X":
             return True
+
+        # Check Diagonals
         elif self.board[0][0] == "X" and self.board[1][1] == "X" and self.board[2][2] == "X":
             return True
         elif self.board[0][2] == "X" and self.board[1][1] == "X" and self.board[2][0] == "X":
+            return True
+
+        # Check Columns
+        elif self.board[0][0] == "X" and self.board[1][0] == "X" and self.board[2][0] == "X":
+            return True
+        elif self.board[0][1] == "X" and self.board[1][1] == "X" and self.board[2][1] == "X":
+            return True
+        elif self.board[0][2] == "X" and self.board[1][2] == "X" and self.board[2][2] == "X":
             return True
         else:
             return False
 
     def check_o(self):
+
+        # Check Rows
         if self.board[0][0] == "O" and self.board[0][1] == "O" and self.board[0][2] == "O":
             return True
         elif self.board[1][0] == "O" and self.board[1][1] == "O" and self.board[1][2] == "O":
             return True
         elif self.board[2][0] == "O" and self.board[2][1] == "O" and self.board[2][2] == "O":
             return True
+        
+        # Check Diagonals
         elif self.board[0][0] == "O" and self.board[1][1] == "O" and self.board[2][2] == "O":
             return True
         elif self.board[0][2] == "O" and self.board[1][1] == "O" and self.board[2][0] == "O":
+            return True
+
+        # Check Columns
+        elif self.board[0][0] == "O" and self.board[1][0] == "O" and self.board[2][0] == "O":
+            return True
+        elif self.board[0][1] == "O" and self.board[1][1] == "O" and self.board[2][1] == "O":
+            return True
+        elif self.board[0][2] == "O" and self.board[1][2] == "O" and self.board[2][2] == "O":
             return True
         else:
             return False
