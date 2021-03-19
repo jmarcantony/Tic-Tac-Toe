@@ -11,7 +11,7 @@ class Board:
       {self.board[1][0]} | {self.board[1][1]} | {self.board[1][2]}
      ---|---|---
       {self.board[2][0]} | {self.board[2][1]} | {self.board[2][2]}
-    """)
+        """)
 
     def plot(self, loc):
         if len(loc) == 2:
