@@ -1,6 +1,7 @@
 from board import Board
 from art import logo
 import time
+import sys
 import os
 
 
@@ -41,9 +42,13 @@ def main():
 
 
 if __name__ == "__main__":
-    print(logo)
-    print("\n[*] PRESS ENTER TO START")
-    input()
-    clear()
+    try:
+        print(logo)
+        print("\n[*] PRESS ENTER TO START")
+        input()
+        clear()
 
-    main()
+        main()
+    except KeyboardInterrupt:
+        print("\nQuitting...\n")
+        sys.exit(1)
