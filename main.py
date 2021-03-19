@@ -1,7 +1,8 @@
 from board import Board
 from art import logo
-import os
 import time
+import os
+
 
 
 def clear():
